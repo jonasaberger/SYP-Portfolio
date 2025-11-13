@@ -1,17 +1,17 @@
 /* Dark theme tokens. Applied when an ancestor sets [data-theme="dark"] or .dark */
 [data-theme="dark"],
 .dark {
-  /* Primary Brand Colors (Flowing Orange) */
-  --accent: #FF8A4C;
-  --accent-dark: #F97316;
-  --accent-rgb: 255, 138, 76;
+  /* Primary Brand Colors (Sleek Dark Purple) */
+  --accent: #5B21B6;        /* rich dark purple for general use */
+  --accent-dark: #7E22CE;   /* brighter purple for highlights or hover */
+  --accent-rgb: 91, 33, 182;
 
   /* Neutral Colors */
-  --black: 255, 255, 255;
-  --gray: 171, 178, 191;
-  --gray-light: 40, 44, 52;
+  --black: 243, 244, 246;   /* light text on dark background */
+  --gray: 171, 178, 191;    /* muted gray */
+  --gray-light: 40, 44, 52; /* background dark gray */
   --gray-dark: 220, 223, 228;
-  --background: #050505;
+  --background: #0B0B17;    /* deep near-black background */
 
   /* Semantic Color Tokens */
   --color-text-primary: rgb(var(--black));
@@ -23,7 +23,7 @@
   --color-border: rgba(var(--gray-light), 0.3);
   --color-border-light: rgba(var(--gray-light), 0.1);
   --color-accent-text: var(--accent);
-  --color-accent-bg: rgba(var(--accent), 0.15);
+  --color-accent-bg: rgba(var(--accent-rgb), 0.15);
 
   /* Translucent surfaces */
   --surface-100: rgba(255, 255, 255, 0.05);
@@ -44,33 +44,32 @@
     0 16px 32px rgba(0, 0, 0, 0.2);
 
   /* Map to Starwind token variables */
-  --background: #1E1E1E;
+  --background: #0B0B17;
   --foreground: rgb(243, 244, 246);
-  /* Translucent card surface on dark bg */
   --card: rgba(255, 255, 255, 0.04);
   --card-foreground: rgb(243, 244, 246);
-  --popover: #282c34;
+  --popover: #161622;
   --popover-foreground: rgb(243, 244, 246);
-  --primary: #FF8A4C;
-  --primary-foreground: #0f1219;
-  --secondary: #FFB36B;
+  --primary: var(--accent);           /* main dark purple */
+  --primary-foreground: rgb(243, 244, 246);
+  --secondary: var(--accent-dark);    /* brighter purple accent */
   --secondary-foreground: rgb(243, 244, 246);
   --muted: rgba(255, 255, 255, 0.06);
   --muted-foreground: rgb(171, 178, 191);
-  --accent-foreground: #0f1219;
-  /* Semantic colors from old project */
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ef4444;
-  --info: #3b82f6;
-  --info-foreground: #082f49;
+  --accent-foreground: rgb(243, 244, 246);
+
+  /* Semantic colors */
+  --success: #10b981;       /* green */
   --success-foreground: #052e16;
+  --warning: #f59e0b;       /* amber */
   --warning-foreground: #451a03;
+  --error: #ef4444;         /* red */
   --error-foreground: #ffffff;
+  --info: #3b82f6;          /* blue */
+  --info-foreground: #082f49;
+
   /* Slightly softer borders on translucent surfaces */
   --border: var(--surface-300);
   --input: var(--surface-300);
-  --outline: #F97316;
+  --outline: var(--accent-dark);      /* focus/hover outlines in purple */
 }
-
-

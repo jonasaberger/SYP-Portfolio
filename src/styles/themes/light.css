@@ -1,25 +1,30 @@
 /* Light theme tokens. Applied when an ancestor sets [data-theme="light"] (default) */
 [data-theme="light"] {
-  --accent: #FF7A1A; /* brighter for light */
-  --accent-dark: #EA580C;
-  --accent-rgb: 255, 122, 26;
+  /* Primary Brand Colors (Sleek Purple) */
+  --accent: #5B21B6;        /* main purple */
+  --accent-dark: #7E22CE;   /* brighter purple for highlights/hover */
+  --accent-rgb: 91, 33, 182;
 
-  --black: 15, 18, 25;
-  --gray: 96, 115, 159;
-  --gray-light: 229, 233, 240;
-  --gray-dark: 34, 41, 57;
+  /* Neutral Colors */
+  --black: 15, 18, 25;      /* main text color */
+  --gray: 96, 115, 159;     /* secondary text/muted text */
+  --gray-light: 229, 233, 240; /* borders, backgrounds */
+  --gray-dark: 34, 41, 57;  /* headings, strong text */
 
-  --background: #ffffff;
-  --foreground: #0f1219;
-  --card: #ffffff;
+  /* Backgrounds */
+  --background: #FFFFFF;           /* page background */
+  --foreground: #0f1219;           /* main text */
+  --card: #FFFFFF;                 /* card background */
   --card-foreground: #0f1219;
-  --popover: #ffffff;
+  --popover: #FFFFFF;
   --popover-foreground: #0f1219;
+
+  /* Buttons / Highlights */
   --primary: var(--accent);
-  --primary-foreground: #ffffff;
-  --secondary: #FFB36B;
-  --secondary-foreground: #0f1219;
-  --muted: rgb(246, 247, 249);
+  --primary-foreground: #FFFFFF;
+  --secondary: #A855F7;             /* softer purple accent */
+  --secondary-foreground: #FFFFFF;
+  --muted: rgb(246, 247, 249);      /* subtle muted surfaces */
   --muted-foreground: rgb(96, 115, 159);
   --accent-foreground: #0f1219;
 
@@ -35,18 +40,23 @@
   --color-border: rgba(0, 0, 0, 0.12);
   --color-border-light: rgba(0, 0, 0, 0.08);
 
-  --info: #38bdf8;
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  /* Semantic colors */
+  --info: #3b82f6;
   --info-foreground: #082f49;
   --success: #22c55e;
-  --success-foreground: #052e16;
+  --success-foreground: #064e3b;
   --warning: #f59e0b;
-  --warning-foreground: #451a03;
+  --warning-foreground: #78350f;
   --error: #ef4444;
   --error-foreground: #ffffff;
 
+  /* General UI */
   --border: rgb(229, 233, 240);
   --input: rgb(229, 233, 240);
   --outline: var(--accent);
 }
-
-
