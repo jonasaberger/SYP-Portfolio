@@ -1,0 +1,30 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/sections/Header.astro";
+import Footer from "../components/sections/Footer.astro";
+import HeroSection from "../components/sections/HeroSection.astro";
+import { work } from '../data/work';
+import WorkExperience from "@/components/sections/WorkExperience.astro";
+import Studies from '../components/sections/Studies.astro';
+import { studies } from '../data/studies';
+---
+
+
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <BaseHead title="Karriere" description="Meine Karriere und Zertifizierungen" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <HeroSection title="Meine Karriere" subtitle="" />
+      <WorkExperience title="" items={work} />
+
+      <HeroSection title="Meine Zertifikate" subtitle="" />
+      <Studies title="" items={studies} />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+

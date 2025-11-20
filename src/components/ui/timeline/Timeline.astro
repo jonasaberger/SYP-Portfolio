@@ -5,9 +5,10 @@ interface Item {
   region: string;
   description: string;
   technologies?: string[];
+  date?: string;
 }
 
-interface Props { items: Item[], icons?: { job: string; company: string; location: string }, centered?: boolean }
+interface Props { items: Item[], icons?: {company: string; location: string }, centered?: boolean }
 // fallback icons from assets if not provided via props
 // @ts-ignore - vite raw import yields string
 import jobIconRaw from '../../../assets/icons/job-title-icon.svg?raw';
@@ -36,7 +37,6 @@ function normalizeIcon(raw: string): string {
 }
 
 const props = Astro.props as Props;
-const jobIcon = (props.icons?.job ?? normalizeIcon(jobIconRaw));
 const companyIcon = (props.icons?.company ?? normalizeIcon(companyIconRaw));
 const locationIcon = (props.icons?.location ?? normalizeIcon(locationIconRaw));
 const { items, centered = true } = props;
@@ -58,6 +58,18 @@ const { items, centered = true } = props;
             <!-- Dot on the center line -->
             <div class="absolute left-1/2 -translate-x-1/2 top-4 size-3 rounded-full bg-[var(--accent)] ring-4 ring-[color:var(--background)]"></div>
 
+             <!-- Date on the opposite side -->
+            <div class:list={[
+              'absolute top-4 flex items-center',
+              isLeft
+                ? 'left-1/2 translate-x-9 -translate-y-2'
+                : 'right-1/2 -translate-x-9 -translate-y-2',
+            ]}>
+              <span class="bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)] bg-clip-text text-transparent font-extrabold" >
+                {item.date}
+              </span>
+            </div>
+
             <div class:list={[
               'w-full md:w-1/2',
               isLeft ? 'pr-6 md:pr-12' : 'pl-6 md:pl-12',
@@ -65,7 +77,6 @@ const { items, centered = true } = props;
               <div class="card-surface p-6">
                 <div class="mb-2 space-y-1">
                   <h3 class="text-xs leading-snug font-semibold m-0 flex items-center gap-2">
-                    <span class="inline-flex" aria-hidden="true" set:html={jobIcon} />
                     {item.title}
                   </h3>
                   <p class="text-sm font-medium text-[color:var(--color-text-muted)] m-0 flex items-center gap-2">
@@ -105,7 +116,6 @@ const { items, centered = true } = props;
           <div class="card-surface p-4 md:p-6 w-full min-w-0">
             <div class="mb-2 space-y-1">
               <h3 class="text-xs leading-snug font-semibold m-0 flex items-center gap-2">
-                <span class="inline-flex" aria-hidden="true" set:html={jobIcon} />
                 {item.title}
               </h3>
               <p class="text-sm font-medium text-[color:var(--color-text-muted)] m-0 flex items-center gap-2">
