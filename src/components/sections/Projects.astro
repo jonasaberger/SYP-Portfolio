@@ -18,7 +18,7 @@ const { title } = Astro.props as Props;
 
     <div class="grid grid-cols-1 gap-6">
       {projects.map((p) => (
-        <article class="card-surface p-6 relative flex flex-col md:flex-row items-center md:items-start gap-6">
+        <article class="card-surface p-6 relative flex flex-col md:flex-row items-center md:items-start gap-12">
           
           {/* Project Image */}
           {p.image && (
@@ -33,10 +33,6 @@ const { title } = Astro.props as Props;
               />
             </div>
           )}
-
-
-
-          
 
           {/* Card Content */}
           <div class="flex-1">
