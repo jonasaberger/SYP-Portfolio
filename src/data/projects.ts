@@ -1,9 +1,17 @@
 import PythonIcon from '../assets/logos/Python-logo.svg?raw';
 import MongoIcon from '../assets/logos/MongoDB-logo.svg?raw';
 import JavaIcon from '../assets/logos/Java-logo.svg?raw';
+import CassandraIcon from '../assets/logos/Cassandra-logo.svg?raw';
+import PostgreSQLIcon from '../assets/logos/Postgres-logo.svg?raw';
+import KubernetesIcon from '../assets/logos/Kubernetes-logo.svg?raw';
+import DockerIcon from '../assets/logos/Docker-logo.svg?raw';
+
+
+
 import ETL from '../assets/images/EscapeTheLore.png';
 import MBOT from '../assets/images/MBOT.png';
 import ADVENT from '../assets/images/Adventkalender.png';
+import CASSANDRA from '../assets/logos/Cassandra-logo.svg';
 
 
 export const projects = [
@@ -33,5 +41,14 @@ export const projects = [
     ctaLink: "https://github.com/jonasaberger/AdventkalenderSlim",
     icon: [JavaIcon],
     image: ADVENT
+  },
+  {
+    title: "Apache Cassandra Intro & Benchmarking",
+    techStack: "Python, Cassandra, MongoDB, PostgreSQL, Kubernetes, Docker",
+    description: "5AHIF 2024/25 DBI - Projekt - HTL St.Johann\nEinführung in Apache Cassandra und Benchmarking im Vergleich zu MongoDB und PostgreSQL.",
+    ctaText: "Repo anzeigen →",
+    ctaLink: "",
+    icon: [PythonIcon, CassandraIcon, MongoIcon, PostgreSQLIcon, KubernetesIcon, DockerIcon],
+    image: CASSANDRA
   }
 ];

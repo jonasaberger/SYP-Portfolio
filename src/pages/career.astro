@@ -7,6 +7,7 @@ import { work } from '../data/work';
 import WorkExperience from "@/components/sections/WorkExperience.astro";
 import Studies from '../components/sections/Studies.astro';
 import { studies } from '../data/studies';
+import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astro'
 ---
 
 
@@ -17,11 +18,19 @@ import { studies } from '../data/studies';
   <body>
     <Header />
     <main>
-      <HeroSection title="Meine Karriere" subtitle="" />
-      <WorkExperience title="" items={work} />
+      <section>
+        <HeroSection title="Meine Karriere" subtitle="" />
+        <WorkExperience title="" items={work} />
+      </section>
+      
+      <GlowLineSeparator />
 
-      <HeroSection title="Meine Zertifikate" subtitle="" />
-      <Studies title="" items={studies} />
+      <section class="mt-10">
+        <HeroSection title="Meine Zertifikate" subtitle="" />
+        <Studies title="" items={studies} />
+      </section>
+
+      
     </main>
     <Footer />
   </body>
