@@ -36,16 +36,14 @@ const { title } = Astro.props as Props;
           )}
 
           {/* Card Content */}
-          <div class="flex-1 w-full min-w-0"> {/* min-w-0 prevents flex overflow */}
+          <div class="flex-1 w-full min-w-0">
             <div class="absolute right-4 top-4 text-[var(--accent)] [&>svg]:w-5 [&>svg]:h-5 md:[&>svg]:w-6 md:[&>svg]:h-6" set:html={p.icon} />
             
-            {/* Title and tech stack */}
-            <div class="pr-8 md:pr-10"> {/* Prevents text overlap with icon */}
+            <div class="pr-8 md:pr-10">
               <h3 class="text-lg md:text-xl font-semibold text-foreground m-0 break-words">{p.title}</h3>
               <p class="text-xs md:text-sm text-[color:var(--color-text-muted)] m-0 mt-1 break-words">{p.techStack}</p>
             </div>
 
-            {/* Description with proper text wrapping */}
             <div class="mt-4 space-y-2 md:space-y-3">
               {p.description.split("\n").map((line, index) => (
                 <p 
@@ -57,7 +55,6 @@ const { title } = Astro.props as Props;
               ))}
             </div>
 
-            {/* Button container */}
             <div class="mt-6 flex justify-start">
               <Button href={p.ctaLink} variant="primary" size="sm">{p.ctaText}</Button>
             </div>
@@ -69,13 +66,11 @@ const { title } = Astro.props as Props;
 </section>
 
 <style>
-  /* Ensure text never overflows */
   .break-words {
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
   
-  /* Mobile-first responsive adjustments */
   @media (max-width: 768px) {
     .card-surface {
       padding: 1rem;
