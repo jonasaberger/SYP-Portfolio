@@ -9,6 +9,7 @@ function sanitizeToWhite(svg: string, size = 18) {
     .replace(/<!--([\s\S]*?)-->/g, "")
     .replace(/width=\"[^\"]*\"/g, "")
     .replace(/height=\"[^\"]*\"/g, "")
+    
     // Ensure shapes are visible: use white via currentColor on fill, drop strokes
     .replace(/fill=\"[^\"]*\"/gi, 'fill="currentColor"')
     .replace(/stroke=\"[^\"]*\"/gi, 'stroke="none"');

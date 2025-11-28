@@ -45,7 +45,7 @@ npm run preview
 
 ## 📁 Project Structure
 
-```text
+```textF
 free-astro-template/
 ├── public/
 │   └── favicon.svg
