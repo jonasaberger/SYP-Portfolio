@@ -9,6 +9,7 @@ export const workIcons = {
 
 export const work = [
   {
+    id: 0,
     title: "Schüler – Informatik (Sekundarstufe II)",
     company: "HTL Saalfelden - Informatik",
     region: "Expositur St.Johann im Pongau, Österreich",
@@ -31,20 +32,7 @@ export const work = [
     ],
   },
   {
-    title: "Praktikant im Informatik-Bereich",
-    company: "Foreus Intelligence GmbH",
-    region: "Österreich",
-    date: "08/2023 – 09/2023",
-    description:
-      "Analyse von Informationen aus offenen Quellen, Unterstützung bei Backgroundchecks sowie Mitarbeit bei der Analyse und Behebung von Sicherheitslücken.",
-    technologies: [
-      "OSINT-Tools",
-      "Sicherheitsanalyse",
-      "Dokumentation",
-      "Recherchesysteme",
-    ],
-  },
-  {
+    id: 1,
     title: "Schüler – Informatik-Mittelschule (Sekundarstufe I)",
     company: "Informatik-Mittelschule Bruck a.d. Großglocknerstraße",
     region: "Österreich",

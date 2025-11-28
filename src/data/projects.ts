@@ -7,11 +7,10 @@ import KubernetesIcon from '../assets/logos/Kubernetes-logo.svg?raw';
 import DockerIcon from '../assets/logos/Docker-logo.svg?raw';
 
 
-
 import ETL from '../assets/images/EscapeTheLore.png';
 import MBOT from '../assets/images/MBOT.png';
 import ADVENT from '../assets/images/Adventkalender.png';
-import CASSANDRA from '../assets/logos/Cassandra-logo.svg';
+import CASSANDRA from '../assets/images/CassandraBenchmark.jpg';
 
 
 export const projects = [
@@ -25,7 +24,7 @@ export const projects = [
     image: ETL
   },
   {
-    title: "MBOT - Steuerungseinheit / Backend",
+    title: "MBOT - Steuerungseinheit",
     techStack: "Python, Flask, MongoDB",
     description: "4AHINF 2024/25 SYP Projekt - HTL St.Johann\nEntwicklung einer Backend-Steuerungseinheit für einen autonomen Roboter.",
     ctaText: "Repo anzeigen →",
@@ -43,7 +42,7 @@ export const projects = [
     image: ADVENT
   },
   {
-    title: "Apache Cassandra Intro & Benchmarking",
+    title: "Cassandra - Benchmarking",
     techStack: "Python, Cassandra, MongoDB, PostgreSQL, Kubernetes, Docker",
     description: "5AHIF 2024/25 DBI - Projekt - HTL St.Johann\nEinführung in Apache Cassandra und Benchmarking im Vergleich zu MongoDB und PostgreSQL.",
     ctaText: "Repo anzeigen →",
